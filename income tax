@@ -6,17 +6,19 @@ class Income
 	double tax=0,it;
 	Scanner sc=new Scanner(System.in);
 	System.out.println("Enter income ");
-	it=sc.nextDouble();
-	if(it<=200000)
-		tax=0;
-	else if(it<=300000)
-		tax=0.1*(it-200000);
-	else if(it<=500000)
-		tax=(0.2*(it-300000))+(0.1*100000);
-	else if(it<=1000000)
-		tax=(0.3*(it-500000))+(0.2*200000)+(0.1*100000);
-	else
-		tax=(0.4*(it-1000000))+(0.3*500000)+(0.2*200000)+(0.1*100000);
+	nt income,tax;
+        if(income<=150000)
+        cout<<" no tax to be collected ";
+        else if(income>=150001 & income <=300000):
+        tax=income/10;
+        cout<<"the tax amount is:"<<tax;
+        else if(income>=300001 & income<=500000):
+        tax=income/20;
+        cout<<"the tax amount is:"<<tax;
+        else:
+           tax=income/30
+        cout<<"the tax amount is:";
+        }
 	System.out.println("Income tax amount is "+tax);
 	}
 }
